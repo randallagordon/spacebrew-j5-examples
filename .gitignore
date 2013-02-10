@@ -1,0 +1,6 @@
+*.sw*
+.*.sw*
+.vagrant
+public
+node_modules
+
