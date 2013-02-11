@@ -3,7 +3,7 @@ Five = require 'johnny-five'
 
 server = 'sandbox.spacebrew.cc'
 name = 'Spacebrew-J5'
-description = 'Control an LED using Spacebrew and Johnny-Five'
+description = 'Arduino LED via Johnny-Five'
 
 sb = new Spacebrew.Client(server, name, description)
 sb.addSubscribe 'onOff', 'boolean'
@@ -15,9 +15,6 @@ hilo = true
 
 board.on 'ready', ->
   led = new Five.Led pin: 13
-  led.off()
-  this.wait 3000, ->
-    led.on()
 
 onBooleanMessage = (name, value) ->
   if hilo then led.on() else led.off()
