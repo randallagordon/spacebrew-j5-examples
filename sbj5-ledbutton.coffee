@@ -1,5 +1,5 @@
 Spacebrew = require('./sb.js').Spacebrew
-Five = require 'johnny-five'
+five = require 'johnny-five'
 
 server = 'sandbox.spacebrew.cc'
 name = 'SbJ5-LEDandButton'
@@ -10,13 +10,13 @@ sb.addSubscribe 'LED', 'boolean'
 sb.addPublish 'Button', 'boolean', 'false'
 sb.connect()
 
-board = new Five.Board()
+board = new five.Board()
 led = {}
 hilo = true
 
 board.on 'ready', ->
-  led = new Five.Led pin: 13
-  button = new Five.Button pin: 2
+  led = new five.Led pin: 13
+  button = new five.Button pin: 2
   button.on 'down', ->
     sb.send('Button', 'boolean', 'true')
   button.on 'up', ->
@@ -27,4 +27,3 @@ onBooleanMessage = (name, value) ->
   hilo = not hilo
 
 sb.onBooleanMessage = onBooleanMessage
-
