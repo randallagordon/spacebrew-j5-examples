@@ -1,6 +1,6 @@
 # spacebrew-j5-examples
 
-Minimal CoffeeScript examples to get Spacebrew talking to an Arduino via Johnny-Five. Upload the Standard Firmata sketch to your Arduino, run these examples and wire them up via the public [Spacebrew Admin](http://spacebrew.cc/master/spacebrew/admin/admin.html?server=sandbox.spacebrew.cc) interface!
+Minimal CoffeeScript examples to get Spacebrew talking to an Arduino via Johnny-Five. Upload the Standard Firmata sketch to your Arduino, run these examples and wire them up via the public [Spacebrew Admin](http://spacebrew.github.com/spacebrew/admin/admin.html?server=sandbox.spacebrew.cc) interface!
 
 ###### sbj5-button.coffee
 Publishes the boolean value of a connected button
